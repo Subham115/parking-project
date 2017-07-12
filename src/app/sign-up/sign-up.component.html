@@ -1,0 +1,51 @@
+<h1>Parking App Sign Up Form</h1>
+
+<form (ngSubmit)="onSubmit()" #f="ngForm">
+
+  <label for="firstName">First Name</label>
+  <input type="text" id="firstName" ngModel name="firstName" ng-pattern ="/^[a-zA-Z\s]*$/" required><br>
+
+  <label for="lastName">Last Name</label>
+  <input type="text" id="lastName" ngModel name="lastName"><br>
+
+  <label for="email">Email</label>
+  <input type="text" id="email" ngModel name="email" email><br>
+
+  <label for="password">Password</label>
+  <input type="password" id="password" ngModel name="password"><br>
+
+  <label for="cPassword">Confirm Password</label>
+  <input type="text" id="cPassword" ngModel name="cPassword"><br>
+
+  <label for="birthdate">Birth Date</label>
+  <input type="text" id="birthdate" ngModel name="birthdate"><br>
+
+
+  <label for="flatPurDate">Birth Date</label>
+  <input type="text" id="flatPurDate" ngModel name="flatPurDate"><br>
+
+  <label for="terms">Agree to terms  and condition</label>
+  <input type="checkbox" id="terms" ngModel name="terms"><br>
+
+  <label for="block">Block</label>
+  <select id="block" ngModel name="block">
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+    <option value="F">F</option>
+  </select><br>
+
+  <label for="flatNo">Flat Number</label>
+  <input type="text" id="flatNo" ngModel name="flatNo"><br>
+
+  <label for="mobileNo">Mobile Number</label>
+  <input type="text" id="mobileNo" ngModel name="mobileNo"><br>
+
+  <button type="submit" [disabled]="!f.valid">Submit</button>
+
+  
+
+</form>
+
