@@ -5,20 +5,20 @@ import { Http } from '@angular/http'
 export class MemberService{
 
     private member: {
-        fname: string, 
-        lname: string,
-        email: string
+        Fname: string, 
+        Lname: string,
+        Email: string
      }
 
     constructor(private http: Http) {}
     
-    setMember(fname:string, lname: string, email: string) {
+    addMember(fname:string, lname: string, email: string) {
 
-        this.member.fname = fname;
-        this.member.lname = lname;  
-        this.member.email = email;
+        this.member.Fname = fname;
+        this.member.Lname = lname;  
+        this.member.Email = email;
 
-        //this.http.post()
+        return this.http.post('http://111.93.82.91:3000',this.member);
     }
 
     getMember() {
