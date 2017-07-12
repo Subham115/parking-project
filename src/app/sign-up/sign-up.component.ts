@@ -20,8 +20,8 @@ export class SignUpComponent implements OnInit {
     console.log(this.signUpForm.form.controls.firstName.value);
 
     this.memberService.addMember(this.signUpForm.form.controls.firstName.value,
-      this.signUpForm.form.controls.firstName.value,
-      this.signUpForm.form.controls.firstName.value).subscribe(
+      this.signUpForm.form.controls.lastName.value,
+      this.signUpForm.form.controls.emailName.value).subscribe(
 
         (response) => console.log("Successfull"+response),
         (error) => console.log("Failure"+error)
